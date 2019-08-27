@@ -1,23 +1,9 @@
 import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { withNamespaces } from 'react-i18next';
+
+function App ({ t }) {
+  return <h1>{t('Welcome to React')}</h1>
 }
 
-export default App;
+export default withNamespaces()(App);
